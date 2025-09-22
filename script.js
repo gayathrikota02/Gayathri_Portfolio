@@ -75,18 +75,6 @@ function updateScrollButtons() {
 
 
 
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
-hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
-});
-
-
-const projectContainer = document.querySelector('.projects-grid');
-const leftBtn = document.querySelector('.arrow-btn.left');
-const rightBtn = document.querySelector('.arrow-btn.right');
-leftBtn.onclick = () => projectContainer.scrollBy({ left: -projectContainer.offsetWidth, behavior: 'smooth' });
-rightBtn.onclick = () => projectContainer.scrollBy({ left: projectContainer.offsetWidth, behavior: 'smooth' });
 
 
 
