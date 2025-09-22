@@ -540,5 +540,84 @@ body.dark-mode #theme-toggle {
 
 
 /* Universal box-sizing and spacing handled by your existing * selector */
+/* Navbar stack on mobile */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 10px 20px;
+  }
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+  .nav-links a {
+    font-size: 1.1rem;
+    padding: 10px;
+  }
+  .logo {
+    margin-bottom: 15px;
+  }
+}
+
+/* Hero text adjustment for phones */
+@media (max-width: 600px) {
+  .hero-content h1 {
+    font-size: 1.9rem;
+  }
+  .hero-content .hero-name {
+    font-size: 1.7rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+}
+
+/* Skills grid: fewer columns on phones */
+@media (max-width: 600px) {
+  .skills-grid-cards {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 18px;
+  }
+  .skill-card {
+    padding: 25px 15px 20px 15px;
+    font-size: 1rem;
+  }
+  .skill-card i {
+    font-size: 2.2rem;
+  }
+  .skill-card span {
+    font-size: 1rem;
+  }
+}
+
+/* Project cards: vertical stacking & cleaner spacing */
+@media (max-width: 600px) {
+  .projects-wrapper {
+    flex-direction: column;
+    gap: 25px;
+  }
+  .scroll-btn {
+    display: none;
+  }
+  .projects-grid {
+    flex-direction: column;
+  }
+  .project-card {
+    min-width: auto;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+/* Footer padding adjustment */
+@media (max-width: 400px) {
+  .footer {
+    padding: 12px 10px;
+    font-size: 0.9rem;
+  }
+}
+
 
 
