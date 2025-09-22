@@ -75,3 +75,9 @@ function updateScrollButtons() {
 projectContainer.addEventListener('scroll', updateScrollButtons);
 window.addEventListener('resize', updateScrollButtons);
 updateScrollButtons();
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
+});
+
