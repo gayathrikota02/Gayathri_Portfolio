@@ -72,9 +72,6 @@ function updateScrollButtons() {
     projectContainer.scrollLeft + projectContainer.clientWidth >= projectContainer.scrollWidth;
 }
 
-
-
-
-
-
-
+projectContainer.addEventListener('scroll', updateScrollButtons);
+window.addEventListener('resize', updateScrollButtons);
+updateScrollButtons();
