@@ -540,84 +540,150 @@ body.dark-mode #theme-toggle {
 
 
 /* Universal box-sizing and spacing handled by your existing * selector */
-/* Navbar stack on mobile */
-@media (max-width: 768px) {
+/* Navbar mobile hamburger and stacking */
+@media (max-width: 600px) {
   .navbar {
-    flex-direction: column;
-    padding: 10px 20px;
-  }
-  .nav-links {
-    flex-direction: column;
-    width: 100%;
-    gap: 12px;
-  }
-  .nav-links a {
-    font-size: 1.1rem;
-    padding: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 10px;
+    position: relative;
   }
   .logo {
-    margin-bottom: 15px;
+    font-size: 1.4rem;
+    color: #7b50fa !important;
+    margin-bottom: 0;
+    font-weight: 700;
+  }
+  .nav-links {
+    display: none; /* Hide nav links, show hamburger */
+  }
+  .navbar .hamburger {
+    display: block;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
   }
 }
 
-/* Hero text adjustment for phones */
+/* Show nav links when hamburger/menu is clicked */
 @media (max-width: 600px) {
-  .hero-content h1 {
-    font-size: 1.9rem;
+  .nav-links.open {
+    display: flex !important;
+    flex-direction: column;
+    gap: 18px;
+    position: absolute;
+    top: 50px; /* below navbar */
+    left: 0;
+    width: 100vw;
+    background: #fff;
+    box-shadow: 0 3px 15px #0002;
+    z-index: 1002;
   }
-  .hero-content .hero-name {
-    font-size: 1.7rem;
-  }
-  .hero-content p {
-    font-size: 1rem;
-    margin-bottom: 20px;
+  .nav-links.open a {
+    padding: 14px;
+    font-size: 1.1rem;
+    text-align: center;
+    border-bottom: 1px solid #edf0ff;
   }
 }
 
-/* Skills grid: fewer columns on phones */
+/* Main content section paddings and centering */
+.section {
+  padding: 40px 8px;
+}
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 22px;
+  color: #7b50fa;
+  font-weight: 700;
+}
+.hero-content h1,
+.hero-content .hero-name {
+  font-size: 2.1rem;
+  color: #7b50fa;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 18px;
+}
+.hero-content p {
+  font-size: 1.1rem;
+  color: #444;
+  text-align: center;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+/* Button styles matching demo */
+.btn-download, .btn-contact {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #7b50fa;
+  color: #fff;
+  padding: 14px 34px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1.13rem;
+  margin: 12px 15px 0 0;
+  border: none;
+  transition: background 0.2s;
+  letter-spacing: 0.3px;
+  box-shadow: 0 4px 18px #7b50fa22;
+}
+.btn-download.outline {
+  background: none;
+  color: #7b50fa;
+  border: 2px solid #7b50fa;
+  box-shadow: none;
+}
+.btn-download i,
+.btn-contact i {
+  margin-right: 9px;
+  font-size: 1.3rem;
+}
+
+/* Skill cards: stack and shrink for mobile */
 @media (max-width: 600px) {
   .skills-grid-cards {
-    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-    gap: 18px;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 17px;
+    padding: 0 4px;
   }
   .skill-card {
-    padding: 25px 15px 20px 15px;
+    padding: 21px 7px 15px 7px;
     font-size: 1rem;
   }
   .skill-card i {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
   .skill-card span {
+    font-size: 0.96rem;
+  }
+}
+
+/* Responsive projects and volunteering */
+@media (max-width: 600px) {
+  .projects-grid,
+  .achievement-list {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .project-card,
+  .achievement-list li {
+    min-width: auto;
+    width: 100%;
+    margin-bottom: 8px;
+  }
+}
+
+/* Responsive footer */
+@media (max-width: 500px) {
+  .footer {
+    padding: 12px 7px;
     font-size: 1rem;
   }
 }
-
-/* Project cards: vertical stacking & cleaner spacing */
-@media (max-width: 600px) {
-  .projects-wrapper {
-    flex-direction: column;
-    gap: 25px;
-  }
-  .scroll-btn {
-    display: none;
-  }
-  .projects-grid {
-    flex-direction: column;
-  }
-  .project-card {
-    min-width: auto;
-    width: 100%;
-    box-sizing: border-box;
-  }
-}
-
-/* Footer padding adjustment */
-@media (max-width: 400px) {
-  .footer {
-    padding: 12px 10px;
-    font-size: 0.9rem;
-  }
-}
-
-
-
