@@ -641,23 +641,33 @@ body.dark-mode #theme-toggle {
 
 
 @media (max-width: 600px) {
+  .navbar {
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 12px;
+    min-height: 54px;
+    position: relative;
+  }
+  .nav-toggle {
+    display: block;
+  }
   .nav-links {
     display: none;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     top: 56px;
-    max-height: 300px; /* limit dropdown height */
-    overflow-y: auto; /* allow vertical scroll if needed */
-    width: 90vw; /* smaller width than full */
-    max-width: 360px; /* maximum width for better appearance */
+    max-height: 320px;           /* Set maximum height */
+    overflow-y: auto;            /* Enable vertical scrolling if needed */
+    width: 92vw;                 /* Not covering full screen */
+    max-width: 340px;            /* Max width for appearance */
     background: white;
     flex-direction: column;
     align-items: flex-start;
     z-index: 1500;
     box-shadow: 0 4px 16px rgba(30,50,150,0.14);
-    border-radius: 0 0 16px 16px;
-    padding: 6px 0;
+    border-radius: 0 0 18px 18px;
+    padding: 8px 0;
   }
   .nav-links.show {
     display: flex;
@@ -666,15 +676,10 @@ body.dark-mode #theme-toggle {
     width: 100%;
   }
   .nav-links a {
-    padding: 12px 20px;
+    padding: 13px 22px;
     font-size: 1.1rem;
     display: block;
     border-bottom: 1px solid #eee;
+    width: 100%;
   }
 }
-
-
-
-
-
-
