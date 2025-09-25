@@ -806,6 +806,42 @@ body.dark-mode #theme-toggle {
     margin-left: 0;
   }
 }
+/* Card background and text for dark mode on mobile */
+body.dark-mode .timeline li {
+  background: #23272a !important;
+  color: #f9f9f9 !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.41);
+}
+/* Ensure logos are visible by keeping their background white */
+body.dark-mode .edu-logo {
+  background: #fff !important;
+  border-radius: 6px;
+  padding: 3px 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+}
+/* Make sure timeline card contents are visible */
+body.dark-mode .timeline li * {
+  color: #f9f9f9 !important;
+}
+
+/* Mobile style: align logo left and reduce logo size */
+@media (max-width: 600px) {
+  .timeline li {
+    flex-direction: row !important;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 7px !important;
+  }
+  .edu-logo {
+    height: 22px !important;
+    max-width: 50px;
+    margin-right: 12px;
+    padding: 2px 4px;
+    background: #fff;
+  }
+}
+
+
 
 
 
