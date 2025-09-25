@@ -766,40 +766,7 @@ body.dark-mode #theme-toggle {
   box-shadow: 0 1px 4px rgba(0,0,0,0.04);
 }
 
-/* For cards that start with only images, center the image and add spacing. */
-.timeline li .edu-logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 8px;
-  margin-top: 8px;
-}
 
-@media (max-width: 800px) {
-  .edu-logo {
-    height: 32px;
-    max-width: 96px;
-    margin-bottom: 8px;
-    margin-right: 7px;
-  }
-}
-
-@media (max-width: 600px) {
-  .edu-logo {
-    height: 24px;         /* Smaller on mobile for neatness */
-    max-width: 80px;
-    margin-bottom: 8px;
-    margin-right: 0;
-  }
-  /* If the timeline li flex-direction becomes column, center image */
-  .timeline li, .achievement-list li {
-    text-align: center !important;
-  }
-  .timeline li .edu-logo, .achievement-list li .edu-logo {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
 
 
 
