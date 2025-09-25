@@ -640,5 +640,125 @@ body.dark-mode #theme-toggle {
 
 
 
+/* Existing base CSS omitted for brevity - This is the ADDITION */
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 12px 6px;
+    min-height: 60px;
+  }
+  .logo {
+    margin-bottom: 8px;
+    font-size: 1.3rem;
+  }
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 6px;
+    align-items: center;
+  }
+  .nav-links a {
+    font-size: 1rem;
+    padding: 7px 0;
+  }
+  .section {
+    padding: 46px 6px;
+    margin: 0 auto;
+    width: 98vw;
+    max-width: 98vw;
+  }
+  .section-title {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+  }
+  .hero-content h1 {
+    font-size: 1.6rem;
+  }
+  .hero-content .hero-name {
+    font-size: 1.3rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+  .skills-grid-cards {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+    margin-top: 15px;
+    padding: 0 5px;
+  }
+  .skill-card {
+    padding: 20px 10px;
+    font-size: 1rem;
+    margin: 0 auto;
+  }
+  .skill-card i {
+    font-size: 2rem;
+  }
+  .timeline li {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 0.94rem;
+    gap: 5px;
+    margin: 10px 0;
+    padding: 12px;
+  }
+  .edu-logo {
+    height: 22px;
+    margin-right: 5px;
+  }
+  .projects-wrapper {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .projects-container {
+    padding-bottom: 5px;
+  }
+  .projects-grid {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .project-card {
+    min-width: 96vw;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 14px 8px;
+    font-size: 0.95rem;
+  }
+  .github-link {
+    font-size: 1.3rem;
+    right: 8px;
+    top: 8px;
+  }
+  .achievement-list,
+  .timeline {
+    max-width: 99vw;
+  }
+  .contact-links {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+  .contact-links a {
+    padding: 12px 6px;
+    width: 94vw;
+    font-size: 1.03rem;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .footer {
+    font-size: 0.95rem;
+    padding: 10px 0;
+  }
+}
+
+
+
+
+
+
 
 
