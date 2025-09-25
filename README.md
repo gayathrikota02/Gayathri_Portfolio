@@ -1,1 +1,1 @@
-https://gayathrikota02.github.io/Gayathri_Portfolio/
+https://jocular-tartufo-cfa916.netlify.app/
