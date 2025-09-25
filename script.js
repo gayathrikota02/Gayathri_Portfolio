@@ -81,20 +81,4 @@ updateScrollButtons();
 
 
 
-// Hamburger menu for mobile
-const menuBtn = document.getElementById('menu-btn');
-const navLinks = document.getElementById('nav-links');
 
-// Toggle show/hide on hamburger
-menuBtn.addEventListener('click', () => {
-  navLinks.classList.toggle('show');
-});
-
-// Hide menu when link is clicked (for smooth UX)
-document.querySelectorAll('#nav-links a').forEach(link => {
-  link.addEventListener('click', () => {
-    if (window.innerWidth < 700) {
-      navLinks.classList.remove('show');
-    }
-  });
-});
