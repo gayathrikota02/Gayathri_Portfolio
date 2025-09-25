@@ -766,30 +766,7 @@ body.dark-mode #theme-toggle {
   box-shadow: 0 1px 4px rgba(0,0,0,0.04);
 }
 
-.timeline li {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  margin: 15px 0;
-  padding: 15px;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
 
-.edu-logo {
-  display: inline-block;
-  height: 38px;                 /* Laptop/Desktop size */
-  width: auto;
-  max-width: 100px;             /* Prevent from stretching */
-  margin-right: 18px;
-  margin-left: 0;
-  vertical-align: middle;
-  border-radius: 4px;
-  object-fit: contain;
-  background: #fff;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
-}
 
 /* Mobile: smaller and still left-aligned */
 @media (max-width: 600px) {
@@ -812,34 +789,13 @@ body.dark-mode .timeline li {
   color: #f9f9f9 !important;
   box-shadow: 0 2px 8px rgba(0,0,0,0.41);
 }
-/* Ensure logos are visible by keeping their background white */
-body.dark-mode .edu-logo {
-  background: #fff !important;
-  border-radius: 6px;
-  padding: 3px 6px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.12);
-}
+
 /* Make sure timeline card contents are visible */
 body.dark-mode .timeline li * {
   color: #f9f9f9 !important;
 }
 
-/* Mobile style: align logo left and reduce logo size */
-@media (max-width: 600px) {
-  .timeline li {
-    flex-direction: row !important;
-    align-items: center;
-    gap: 10px;
-    padding: 12px 7px !important;
-  }
-  .edu-logo {
-    height: 22px !important;
-    max-width: 50px;
-    margin-right: 12px;
-    padding: 2px 4px;
-    background: #fff;
-  }
-}
+
 
 
 
