@@ -622,3 +622,132 @@ body.dark-mode #theme-toggle {
     font-size: 1rem;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Universal adjustments for mobile font scaling and box-sizing */
+html {
+  font-size: 16px;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Section padding and max-width for mobiles */
+@media (max-width: 480px) {
+  .section, .hero-content {
+    padding: 28px 5px;
+    max-width: 98vw;
+  }
+  .section-title {
+    font-size: 1.3rem;
+    margin-bottom: 24px;
+  }
+}
+
+/* Navbar improvement for mobile click targets */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px 8px;
+  }
+  .nav-links a {
+    padding: 9px 8px;
+    font-size: 0.96rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .logo {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+  }
+}
+
+/* Project and skill card grid wrap text cleanly */
+.project-card, .skill-card {
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Button and link clickable area for mobile */
+.btn-download, .contact-links a, .scroll-btn {
+  font-size: 1rem;
+  padding: 14px 10px;
+}
+
+/* Footer padding for mobile */
+@media (max-width: 480px) {
+  .footer {
+    padding: 10px 0 !important;
+    font-size: 0.93rem;
+  }
+}
+
+/* Horizontal grid scroll fix for projects cards on mobile */
+@media (max-width: 480px) {
+  .projects-container {
+    overflow-x: auto;
+    padding-bottom: 8px;
+    scroll-behavior: smooth;
+  }
+  .projects-wrapper {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .projects-grid {
+    flex-direction: column;
+    gap: 18px;
+  }
+  .project-card {
+    min-width: unset;
+    width: 96vw;
+    margin: 0 auto;
+  }
+}
+
+/* Timeline and achievement list for mobile */
+@media (max-width: 480px) {
+  .timeline li, .achievement-list li {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    font-size: 0.98rem;
+  }
+}
+
+/* Skill grid columns adjust to 1 per line for very small screens */
+@media (max-width: 350px) {
+  .skills-grid-cards {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .skill-card {
+    font-size: 0.92rem;
+    padding: 16px 5px;
+  }
+}
+
+/* Make sure all text remains readable and avoids horizontal scroll */
+body, html {
+  min-width: 100vw;
+  overflow-x: hidden;
+}
+
